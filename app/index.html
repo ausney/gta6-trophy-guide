@@ -1,0 +1,148 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Leonida Platinum — GTA VI Trophy Guide &amp; Tracker</title>
+<meta name="description" content="An offline guide and tracker for all 55 PlayStation 5 trophies of Grand Theft Auto VI: official names, descriptions and grades, a roadmap to the platinum, the one missable trophy flagged, and a cited guide for each.">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="masthead">
+  <div class="masthead-inner">
+    <div class="brand">
+      <div class="brand-mark" aria-hidden="true">LP</div>
+      <div>
+        <h1>Leonida Platinum</h1>
+        <p class="tagline">GTA VI trophy guide &amp; tracker — PlayStation 5 · 55 trophies · all single-player · works offline</p>
+      </div>
+    </div>
+    <div class="progress-wrap" id="progressWrap" aria-live="polite">
+      <div class="progress-ring" id="progressRing" role="img" aria-label="Trophies earned"></div>
+      <div class="progress-text">
+        <strong id="progressCount">0 / 55</strong>
+        <span id="progressPct">0% to the Platinum</span>
+        <span id="progressGrades" class="progress-grades"></span>
+      </div>
+    </div>
+  </div>
+  <nav class="tabs" aria-label="Guide sections">
+    <a href="#checklist" data-view="checklist" class="tab is-active">Checklist</a>
+    <a href="#roadmap" data-view="roadmap" class="tab">Roadmap</a>
+    <a href="#missable" data-view="missable" class="tab">Missable <span class="tab-badge">1</span></a>
+    <a href="#about" data-view="about" class="tab">About &amp; sources</a>
+  </nav>
+</header>
+
+<main>
+  <section id="view-checklist" class="view is-active" aria-label="Trophy checklist">
+    <div class="toolbar">
+      <label class="search">
+        <span class="visually-hidden">Search trophies</span>
+        <input id="searchInput" type="search" placeholder="Search name or description…" autocomplete="off">
+      </label>
+      <div class="chips" id="kindChips" role="group" aria-label="Filter by kind">
+        <button type="button" data-kind="all" class="chip is-active">All 55</button>
+        <button type="button" data-kind="story" class="chip">Story</button>
+        <button type="button" data-kind="missable" class="chip">Missable</button>
+        <button type="button" data-kind="collectibles" class="chip">Collectibles</button>
+        <button type="button" data-kind="activities" class="chip">Activities</button>
+        <button type="button" data-kind="side" class="chip">Side quests</button>
+      </div>
+      <label class="grade-filter">Grade
+        <select id="gradeSelect">
+          <option value="all">All grades</option>
+          <option value="platinum">Platinum</option>
+          <option value="gold">Gold</option>
+          <option value="silver">Silver</option>
+          <option value="bronze">Bronze</option>
+        </select>
+      </label>
+      <label class="toggle"><input id="hideEarned" type="checkbox"> Hide earned</label>
+      <label class="toggle spoiler-toggle"><input id="spoilerToggle" type="checkbox" checked> Spoiler-free: hide story trophies until earned</label>
+    </div>
+    <div class="layout">
+      <div class="list-col">
+        <p class="list-meta" id="listMeta"></p>
+        <ul class="trophy-list" id="trophyList"></ul>
+      </div>
+      <aside class="detail-col" id="detailPane" aria-live="polite"></aside>
+    </div>
+  </section>
+
+  <section id="view-roadmap" class="view" aria-label="Roadmap to the platinum">
+    <div class="page-intro">
+      <h2>The road to the Platinum — about 200 hours</h2>
+      <p>One playthrough, no difficulty settings, no mission replay and no New Game+. The story takes 60–80 hours, the 100% checklist about 100 hours after the credits, and side quests and cleanup about 10 more. The order below is built from the official descriptions: story first, then the strands that stay open, then the grind that shares its work with the 100% checklist.</p>
+    </div>
+    <ol class="roadmap" id="roadmapList"></ol>
+    <div class="callout">
+      <h3>Three things to know before you start</h3>
+      <ul>
+        <li><strong>Meditate in Chapter 1.</strong> The first meditation spot is offered at home in Chapter 1 and is gone after that chapter. It may be needed for Positive Mental Attitude — the list's only possibly missable trophy.</li>
+        <li><strong>No mission replay.</strong> There is free roam after the story, but missions cannot be replayed, so anything tied to a mission has to be done when it first appears.</li>
+        <li><strong>Cheats disable trophies.</strong> The 61 cheats only unlock after the story, and using one disables trophies, achievements and saving for the session. Keep trophy runs cheat-free.</li>
+      </ul>
+    </div>
+  </section>
+
+  <section id="view-missable" class="view" aria-label="Missable trophies">
+    <div class="page-intro">
+      <h2>Missable trophies</h2>
+      <p>One trophy on the whole list is potentially missable. Everything else can be earned in free roam after the story, so there is no need to restart for it — but the one below deserves a warning before you finish Chapter 1.</p>
+    </div>
+    <div id="missableList"></div>
+    <div class="callout">
+      <h3>Everything else is safe</h3>
+      <ul>
+        <li><strong>Story trophies cannot be missed.</strong> All 12 unlock as the story reaches them, in order.</li>
+        <li><strong>Nothing on the 100% checklist is missable.</strong> Earlier progress counts, and the checklist only appears after the story.</li>
+        <li><strong>Side strands stay open.</strong> Andy, Kenton, Billy, Randy, Tyrone and Bret can all be finished in free roam after the credits.</li>
+        <li><strong>Activities and collectibles are all free-roam.</strong> Ranges, races, cards, WAiNK tags, vaults and operations are all available after the story.</li>
+      </ul>
+    </div>
+  </section>
+
+  <section id="view-about" class="view" aria-label="About and sources">
+    <div class="page-intro">
+      <h2>About this guide</h2>
+      <p>Leonida Platinum is a free, open-source, offline guide and tracker for the 55 PlayStation 5 trophies of Grand Theft Auto VI. It runs entirely from its own files: no account, no network, no ads. Your progress is saved in this browser only, and you can export it to a file and import it back on any machine.</p>
+    </div>
+    <div class="about-grid">
+      <div class="about-card">
+        <h3>Your progress</h3>
+        <p>Saved automatically in this browser as you tick trophies off. Export a backup, or move your progress to another machine.</p>
+        <div class="button-row">
+          <button type="button" id="exportBtn" class="btn">Export progress</button>
+          <label class="btn btn-file">Import progress <input id="importInput" type="file" accept="application/json,.json"></label>
+          <button type="button" id="resetBtn" class="btn btn-danger">Reset progress</button>
+        </div>
+        <p class="fineprint" id="saveState">Progress is saved in this browser.</p>
+        <div class="button-row">
+          <button type="button" id="demoBtn" class="btn btn-quiet">Load demo progress (13 of 55)</button>
+        </div>
+      </div>
+      <div class="about-card">
+        <h3>Sources</h3>
+        <p>Every guide in this app names its sources beside it. The trophy names, descriptions and grades are as PlayStation publishes them, taken from the official list as Exophase and PSNProfiles carry it; counts and tips come from GTA Zone and HowToVideoGame, and the difficulty, time and missable call come from PowerPyx as reported by GTA Zone.</p>
+        <ul class="source-list" id="sourceList"></ul>
+      </div>
+      <div class="about-card">
+        <h3>What is not confirmed yet</h3>
+        <p>Five unlocks have not been pinned down by any guide yet: In The Beginning…, Capital Offense, Bad Luck, I Guess, The Truth Is Out There and Ten Pin. Their guides say so plainly and give the best reading of the description, rather than inventing steps. The counts in this guide — 42 range golds, 14 drone spots, 18 meditation spots, 397 stunts, 80 challenges — are the counts the public guides report; they are not Rockstar's own words.</p>
+      </div>
+      <div class="about-card">
+        <h3>The list at a glance</h3>
+        <p>55 trophies: 1 Platinum, 2 Gold, 6 Silver, 46 Bronze. 28 are hidden on PlayStation until earned — 12 story trophies and 16 side and one-off trophies. All 55 are single-player; there are no online or DLC trophies. The same 55 appear on Xbox Series X|S as achievements. Difficulty 4/10, about 200 hours to the Platinum (PowerPyx).</p>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <p>Leonida Platinum — an unofficial, fan-made guide. Grand Theft Auto and GTA are trademarks of Take-Two Interactive; this guide is not affiliated with Rockstar Games or Take-Two, and shows no Rockstar logo or official artwork. Trophy names and descriptions are as PlayStation publishes them. MIT licensed.</p>
+</footer>
+
+<script type="module" src="js/main.js"></script>
+</body>
+</html>
